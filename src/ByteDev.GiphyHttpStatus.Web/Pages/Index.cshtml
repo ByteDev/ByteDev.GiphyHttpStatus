@@ -1,0 +1,11 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Giphy HTTP Status Code";
+}
+
+<div class="text-center">
+    <h1>@Model.GiphyImage.Code - @Model.GiphyImage.Name</h1>
+
+    <img src="@Model.GiphyImage.GiphyImageUrl"/>
+</div>

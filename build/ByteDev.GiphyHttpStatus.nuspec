@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>ByteDev.GiphyHttpStatus</id>
+    <title>ByteDev.GiphyHttpStatus</title>
+    <version>0.0.1</version>
+    <authors>Paul Stanley</authors>
+    <owners>Paul Stanley</owners>
+    <copyright>Copyright 2020</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Library providing giphy style http status codes.</description>
+    <tags>giphy http status code client sdk api</tags>
+	<icon>images\icon.png</icon>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\src\ByteDev.GiphyHttpStatus\bin\Release\netstandard2.0\ByteDev.GiphyHttpStatus.dll" target="lib\netstandard2.0" />
+    <file src="..\src\ByteDev.GiphyHttpStatus\bin\Release\netstandard2.0\ByteDev.GiphyHttpStatus.xml" target="lib\netstandard2.0" />
+	<file src="..\images\icon.png" target="images\" />
+  </files>
+</package>
