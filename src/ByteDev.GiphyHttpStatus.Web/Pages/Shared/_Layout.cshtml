@@ -6,9 +6,17 @@
     <title>@ViewData["Title"]</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <style>
+        body {
+            background: url("@ViewData["GiphyImageUrl"]") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
 </head>
 <body>
-
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()

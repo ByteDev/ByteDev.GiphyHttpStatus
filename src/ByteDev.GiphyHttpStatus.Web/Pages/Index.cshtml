@@ -2,10 +2,19 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Giphy HTTP Status Code";
+    ViewData["GiphyImageUrl"] = Model.GiphyImage.GiphyImageUrl;
 }
+<style>
+    h1 {
+        color: white;
+        text-align: center; 
+    }
+    h1 span { 
+        background-color: black; 
+    }
+</style>
 
 <div class="text-center">
-    <h1>@Model.GiphyImage.Code - @Model.GiphyImage.Name</h1>
-
-    <img src="@Model.GiphyImage.GiphyImageUrl"/>
+    <h1><span>@Model.GiphyImage.Code - @Model.GiphyImage.Name</span></h1>
 </div>
+
