@@ -7,5 +7,7 @@
         public string Name { get; set; }
 
         public string GiphyImageUrl { get; set; }
+
+        public string TextColor { get; set; }
     }
 }

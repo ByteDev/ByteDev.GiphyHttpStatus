@@ -22,13 +22,23 @@ namespace ByteDev.GiphyHttpStatus.Web.Pages
 
         public async Task OnGet(int code = 100)
         {
-            var response = await _client.GetStatusImageAsync(code);
+            var response = await _client.GetStatusImageAsync(code, new GetStatusImageOptions
+            {
+                UseRandomFromSet = true,
+                UseCodeInQuery = true
+            });
+
+            var textColor = 
+                response.Code.IsBetween(300, 399) ? "yellow" :
+                response.Code.IsBetween(400, 599) ? "red" :
+                "white";
 
             GiphyImage = new GiphyImageViewModel
             {
                 Code = response.Code,
                 Name = response.Name,
-                GiphyImageUrl = response.ImageUrl.ToString()
+                GiphyImageUrl = response.ImageUrl.ToString(),
+                TextColor = textColor
             };
         }
     }

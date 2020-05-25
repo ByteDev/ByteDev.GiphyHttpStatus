@@ -11,6 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="ByteDev.Crypto" Version="4.0.0" />
     <PackageReference Include="ByteDev.Giphy" Version="3.1.3" />
     <PackageReference Include="ByteDev.Http" Version="1.0.0" />
   </ItemGroup>
