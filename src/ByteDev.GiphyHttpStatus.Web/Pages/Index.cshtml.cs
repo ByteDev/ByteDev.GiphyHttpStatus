@@ -1,8 +1,6 @@
-﻿using System.Linq;
-using System.Net.Http;
+﻿using System.Net.Http;
 using System.Threading.Tasks;
 using ByteDev.GiphyHttpStatus.Web.ViewModels;
-using ByteDev.Http;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
@@ -24,17 +22,13 @@ namespace ByteDev.GiphyHttpStatus.Web.Pages
 
         public async Task OnGet(int code = 100)
         {
-            var httpStatusCode = HttpStatusCode.CreateFromCode(code);
-
             var response = await _client.GetStatusImageAsync(code);
-
-            var img = response.Gifs.First();
 
             GiphyImage = new GiphyImageViewModel
             {
-                Code = httpStatusCode.Code,
-                Name = httpStatusCode.Name,
-                GiphyImageUrl = img.Images.Original.Url.ToString()
+                Code = response.Code,
+                Name = response.Name,
+                GiphyImageUrl = response.ImageUrl.ToString()
             };
         }
     }
